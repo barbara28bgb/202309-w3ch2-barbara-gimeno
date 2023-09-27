@@ -1,5 +1,8 @@
-const suits = ["♠️", "♥️", "♦️", "♣️"];
-const cardsValue = [
+let cardVisible;
+let cardHidden;
+
+const cardSuits = ["♠️", "♥️", "♦️", "♣️"];
+const cardValues = [
   "2",
   "3",
   "4",
@@ -18,19 +21,22 @@ const cardsValue = [
 const getDeck = () => {
   const deck = [];
 
-  suits.forEach((suit) => {
-    cardsValue.forEach((cardsValue, position) => {
+  cardSuits.forEach((cardSuit) => {
+    cardValues.forEach((cardValue, cardValuePosition) => {
       deck.push({
-        suit: suit,
-        cardsValue: cardsValue,
-        value: position,
+        suit: cardSuit,
+        cardsValue: cardValue,
+        value: cardValuePosition,
       });
     });
   });
+
   return deck;
 };
 
 const getRandomCard = () => {
-  Math.floor(Math.random(getDeck));
-  return getRandomCard();
+  cardVisible = getDeck()[Math.floor(Math.random() * getDeck().length)];
+  cardHidden = getDeck()[Math.floor(Math.random() * getDeck().length)];
 };
+getRandomCard();
+console.log(cardHidden, cardVisible);
