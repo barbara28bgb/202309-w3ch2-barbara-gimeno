@@ -1,0 +1,21 @@
+::before ::after {
+  box-sizing: content-box;
+  width: 20px;
+  border-style: solid;
+  border-color: black;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #9a213d;
+  box-sizing: content-box;
+}
+
+h1 {
+  background-color: rgb(12, 9, 15);
+  color: #9a213d;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 80px;
+}
