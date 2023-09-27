@@ -40,3 +40,13 @@ const getRandomCard = () => {
 };
 getRandomCard();
 console.log(cardHidden, cardVisible);
+
+const cardCheck = () => {
+  if (cardHidden.value > cardVisible.value) {
+    return "bigger";
+  } else if (cardVisible.value > cardHidden.value) {
+    return "smaller";
+  } else {
+    return "equal";
+  }
+};
