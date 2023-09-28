@@ -54,6 +54,10 @@ const getHiddenRandomValue = document.querySelector(
 const getHiddenRandomSuitRight = document.querySelector(
   ".hidden-card-suit-bottom-right"
 );
+const allCardBox = document.querySelector(".card-box");
+
+const graterButton = document.querySelector(".greater-button");
+const smallerButton = document.querySelector(".smaller-button");
 
 const getStartButtonGame = document.querySelector(".start-button-game");
 
@@ -67,9 +71,9 @@ const getCardVisible = () => {
 
     getStartButtonGame.classList.add("hidden");
 
-    getHiddenRandomSuitRight.classList.remove("hidden");
-    getHiddenRandomSuitLeft.classList.remove("hidden");
-    getHiddenRandomSuitLeft.classList.remove("hidden");
+    allCardBox.classList.remove("hidden");
+    graterButton.classList.remove("hidden");
+    smallerButton.classList.remove("hidden");
   });
 };
 
@@ -84,3 +88,7 @@ const cardCheck = () => {
     return "equal";
   }
 };
+
+// getHiddenRandomSuitRight.classList.remove("hidden");
+// getHiddenRandomSuitLeft.classList.remove("hidden");
+// getHiddenRandomSuitLeft.classList.remove("hidden");
