@@ -62,5 +62,6 @@ h1 {
   font-size: 80px;
 }
 
-.visual-card-suit-top-left {
+.hidden {
+  visibility: hidden;
 }

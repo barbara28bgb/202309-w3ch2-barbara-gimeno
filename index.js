@@ -1,6 +1,3 @@
-let cardVisible;
-let cardHidden;
-
 const cardSuits = ["♠️", "♥️", "♦️", "♣️"];
 const cardValues = [
   "2",
@@ -34,13 +31,49 @@ const getDeck = () => {
   return deck;
 };
 
-const getRandomCard = () => {
-  cardVisible = getDeck()[Math.floor(Math.random() * getDeck().length)];
-  cardHidden = getDeck()[Math.floor(Math.random() * getDeck().length)];
+const getRandomCard = () =>
+  getDeck()[Math.floor(Math.random() * getDeck().length)];
+
+const getVisualRandomSuitLeft = document.querySelector(
+  ".visual-card-suit-top-left"
+);
+
+const getVisualRandomValue = document.querySelector(
+  ".visual-card-value-center"
+);
+
+const getVisualRandomSuitRight = document.querySelector(
+  ".visual-card-suit-bottom-right"
+);
+const getHiddenRandomSuitLeft = document.querySelector(
+  ".hidden-card-suit-top-left"
+);
+const getHiddenRandomValue = document.querySelector(
+  ".hidden-card-value-center"
+);
+const getHiddenRandomSuitRight = document.querySelector(
+  ".hidden-card-suit-bottom-right"
+);
+
+const getStartButtonGame = document.querySelector(".start-button-game");
+
+let cardVisibleRandom;
+let cardHiddenRandom;
+
+const getCardVisible = () => {
+  getStartButtonGame.addEventListener("click", (event) => {
+    cardVisibleRandom = getRandomCard();
+    cardHiddenRandom = getRandomCard();
+
+    getStartButtonGame.classList.add("hidden");
+
+    getHiddenRandomSuitRight.classList.remove("hidden");
+    getHiddenRandomSuitLeft.classList.remove("hidden");
+    getHiddenRandomSuitLeft.classList.remove("hidden");
+  });
 };
 
-getRandomCard();
-console.log(cardHidden, cardVisible);
+getCardVisible();
 
 const cardCheck = () => {
   if (cardHidden.value > cardVisible.value) {
