@@ -56,7 +56,7 @@ const getHiddenRandomSuitRight = document.querySelector(
 );
 const allCardBox = document.querySelector(".card-box");
 
-const graterButton = document.querySelector(".greater-button");
+const greaterButton = document.querySelector(".greater-button");
 const smallerButton = document.querySelector(".smaller-button");
 
 const getStartButtonGame = document.querySelector(".start-button-game");
@@ -72,12 +72,28 @@ const getCardVisible = () => {
     getStartButtonGame.classList.add("hidden");
 
     allCardBox.classList.remove("hidden");
-    graterButton.classList.remove("hidden");
+    greaterButton.classList.remove("hidden");
     smallerButton.classList.remove("hidden");
+
+    getVisualRandomValue.textContent = cardVisibleRandom.cardsValue;
+    getVisualRandomSuitLeft.textContent = cardVisibleRandom.suit;
+    getVisualRandomSuitRight.textContent = cardVisibleRandom.suit;
   });
 };
 
 getCardVisible();
+
+const getCardHidden = () => {
+  greaterButton.addEventListener("click", (event) => {
+    getHiddenRandomSuitLeft.textContent = cardHiddenRandom.suit;
+    getHiddenRandomValue.textContent = cardHiddenRandom.cardsValue;
+    getHiddenRandomSuitRight.textContent = cardHiddenRandom.suit;
+    const removeImageHiddernCard = document.querySelector(".card-image");
+    removeImageHiddernCard.classList.remove("card-image");
+  });
+};
+
+getCardHidden();
 
 const cardCheck = () => {
   if (cardHidden.value > cardVisible.value) {
