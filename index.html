@@ -2,28 +2,40 @@
 <html lang="en">
 
 <head>
+  <meta name="description" content="game">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css/styles.css">
-  <title>Document</title>
+  <script src="index.js" defer></script>
+  <link rel="shortcut icon" href="favicon cards.png" type="image/x-icon">
+  <title>Greater or smaller</title>
 </head>
 
 <body>
-  <header>
-    <h1>Let's play: Grater or smaler</h1>
-  </header>
-  <main>
-    <div>
-      <section>
-        <ul class="visible-card">
-        </ul>
-      </section>
-      <section>
-        <ul class="hidden-card">
-        </ul>
-      </section>
+  <div>
+    <header class="title-game">
+      <h1>Let's play: Greater or smaller</h1>
+    </header>
+    <main class="card-box">
+      <div class="card-style">
+        <span class="visual-card-suit-top-left">♠️</span>
+        <span class="visual-card-value-center">A</span>
+        <span class="visual-card-suit-bottom-right">♠️</span>
+      </div>
+      <div class="card-style">
+        <span class="hidden-card-suit-top-left hidden"></span>
+        <span class="hidden-card-value-center hidden"></span>
+        <span class="visual-card-suit-bottom-right hidden"></span>
+      </div>
+    </main>
+    <div class="start-button">
+      <button class="button-style">Start game</button>
     </div>
-  </main>
+    <div>
+      <button class="button-style">Greater</button>
+      <button class="button-style">Smaller</button>
+    </div>
+  </div>
 
 </body>
 

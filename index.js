@@ -38,6 +38,7 @@ const getRandomCard = () => {
   cardVisible = getDeck()[Math.floor(Math.random() * getDeck().length)];
   cardHidden = getDeck()[Math.floor(Math.random() * getDeck().length)];
 };
+
 getRandomCard();
 console.log(cardHidden, cardVisible);
 
