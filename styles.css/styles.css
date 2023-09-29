@@ -9,7 +9,6 @@
   box-sizing: content-box;
 }
 
-h1,
 span {
   margin: 0;
 }
@@ -34,6 +33,7 @@ html {
 }
 
 h1 {
+  margin: 0;
   padding: 12px;
   background-color: #c8f5b2;
   border: 10px solid var(--main-color);
@@ -52,11 +52,11 @@ h1 {
 .card-box {
   margin-top: 50px;
   display: flex;
-  justify-content: center;
-  gap: 140px;
 }
 
 .card-style {
+  margin: 50px;
+  padding: 15px;
   width: 200px;
   height: 300px;
   border: 3px solid var(--main-color);
@@ -66,14 +66,13 @@ h1 {
   justify-content: space-between;
   flex-direction: column;
   color: #000;
-  font-size: 80px;
-  background-color: var(--main-color);
-  color: #47a03a;
+  font-size: 65px;
+  background-color: #47a03a;
 }
 
 .visual-card-suit-top-left {
-  padding-left: 10px;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
 }
 .visual-card-value-center {
   display: inline-flex;
@@ -94,6 +93,11 @@ h1 {
   justify-content: space-around;
 }
 
+.hidden-card-suit-bottom-right {
+  display: flex;
+  justify-content: end;
+}
+
 .card-image {
   background-image: url(/imagen/card-image\ mojito.jpg);
   background-size: cover;
@@ -107,11 +111,28 @@ h1 {
   padding: 10px;
   font-family: var(--font-family);
   font-size: 30px;
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .play-button {
   display: flex;
   justify-content: center;
   gap: 200px;
+}
+
+.message-design {
+  margin: 0;
+  padding: 12px;
+  background-color: #c8f5b2;
+  border: 10px solid var(--main-color);
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 40px;
+  font-size: 28px;
 }
